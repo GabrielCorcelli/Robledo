@@ -131,7 +131,7 @@ JAZZMIN_SETTINGS = {
     # CSS classes that are applied to the logo above
     "site_logo_classes": "img-circle",
     # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
-    "site_icon": None,
+    "site_icon": "imgs/Enrique-Robledo.jpg",
     # Welcome text on the login screen
     "welcome_sign": "Bem vindo ao Robledo",
     # Copyright on the footer
@@ -214,9 +214,13 @@ JAZZMIN_SETTINGS = {
     #############
     # Relative paths to custom CSS/JS scripts (must be present in static files)
     "custom_css": "vendors/raiz/css/admin.custom.css",
-    "custom_js": None,
+    "custom_js": "vendors/raiz/js/admin.custom.js",
     # Whether to show the UI customizer on the sidebar
-    "show_ui_builder": False,
+    "show_ui_builder": True,
+    # Mostrar seletor de idioma no admin
+    "language_chooser": True,
+    # versão pequena do logo para telas pequenas
+    "logo_xs": "imgs/Enrique-Robledo.jpg",
     ###############
     # Change view #
     ###############
@@ -238,5 +242,9 @@ JAZZMIN_SETTINGS = {
 
 # Diretórios adicionais para arquivos estáticos (desenvolvimento)
 STATICFILES_DIRS = [
+    BASE_DIR / 'static',
     BASE_DIR / 'config',
 ]
+
+# Onde `collectstatic` colocará arquivos prontos para servir em produção
+STATIC_ROOT = BASE_DIR / 'staticfiles'
